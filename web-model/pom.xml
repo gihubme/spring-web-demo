@@ -5,11 +5,13 @@
     <parent>
         <artifactId>spring-web-demo</artifactId>
         <groupId>eu.nnn4</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>web-model</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -23,6 +25,11 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.11.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -47,13 +54,13 @@
                 <version>1.1.1</version>
                 <configuration>
                     <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
-                    <targetPackage>eu.nnn4.web_model</targetPackage>
+                    <targetPackage>eu.nnn4.webmodel</targetPackage>
                     <useCommonsLang3>true</useCommonsLang3>
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>generate-sources</phase>
-                        <!--<phase>generate-resources</phase>-->
+                        <!--<phase>generate-sources</phase>-->
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
