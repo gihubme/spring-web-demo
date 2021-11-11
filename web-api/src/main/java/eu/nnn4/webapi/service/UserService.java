@@ -24,13 +24,13 @@ public class UserService {
     public List<ShippingAddress> getByName(String name){
         return users.stream()
                 .filter(a->a.getFirstName().equals(name)||a.getSecondName().equals(name))
-                .map(a->a.getShippingAddress())
+                .map(a->(a.getShippingAddress()==null)?a.getBillingAddress():a.getShippingAddress())
                 .collect(Collectors.toList());
     }
 
     public List<ShippingAddress> getAllShippingAddresses(){
         return users.stream()
-                .map(a->a.getShippingAddress())
+                .map(User::getShippingAddress)
                 .collect(Collectors.toList());
     }
 

@@ -31,7 +31,7 @@
         </encoder>
     </appender>
 
-    <appender name="GELF" class="de.siegmar.logbackgelf.GelfUdpAppender">
+    <!--<appender name="GELF" class="de.siegmar.logbackgelf.GelfUdpAppender">
         <graylogHost>62.171.190.169</graylogHost>
         <graylogPort>12201</graylogPort>
         <maxChunkSize>508</maxChunkSize>
@@ -54,7 +54,7 @@
             <numbersAsString>false</numbersAsString>
              <staticField>STAGE:${STAGE}</staticField>
         </encoder>
-    </appender>
+    </appender>-->
 
     <appender name="CONSOLE_GRAYVARS" class="ch.qos.logback.core.ConsoleAppender">
         <layout>
