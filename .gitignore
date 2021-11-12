@@ -58,15 +58,6 @@ local.properties
 *.ipr
 *.ids
 *.orig
-
-# Default ignored files
-.idea/shelf/
-.idea/workspace.xml
-# Datasource local storage ignored files
-.idea/dataSources/
-.idea/dataSources.local.xml
-# Editor-based HTTP Client requests
-.idea/httpRequests/
 ######################
 # Visual Studio Code
 ######################
@@ -118,6 +109,7 @@ Desktop.ini
 ######################
 # Directories
 ######################
+#only top-directories
 /bin/
 /deploy/
 
