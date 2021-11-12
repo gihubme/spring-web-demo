@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserServiceTest {
     private static List<User> users = new ArrayList<>();
     @BeforeAll
-    void setUp() {
+    static void setUp() {
         int numA=9;
         for(int i=0;i<numA;i++)
             users.add(FakeDataGenerator.createUser());
